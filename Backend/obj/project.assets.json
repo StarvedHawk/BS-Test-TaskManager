@@ -854,11 +854,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\faisa\\OneDrive\\Documents\\Work\\Assignment\\BinSalem\\BinSalem-Test\\Backend\\Backend.csproj",
+      "projectUniqueName": "C:\\Users\\faisa\\OneDrive\\Documents\\Work\\Assignment\\BinSalem\\BS-Test-TaskManager\\Backend\\Backend.csproj",
       "projectName": "Backend",
-      "projectPath": "C:\\Users\\faisa\\OneDrive\\Documents\\Work\\Assignment\\BinSalem\\BinSalem-Test\\Backend\\Backend.csproj",
+      "projectPath": "C:\\Users\\faisa\\OneDrive\\Documents\\Work\\Assignment\\BinSalem\\BS-Test-TaskManager\\Backend\\Backend.csproj",
       "packagesPath": "C:\\Users\\faisa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\faisa\\OneDrive\\Documents\\Work\\Assignment\\BinSalem\\BinSalem-Test\\Backend\\obj\\",
+      "outputPath": "C:\\Users\\faisa\\OneDrive\\Documents\\Work\\Assignment\\BinSalem\\BS-Test-TaskManager\\Backend\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
