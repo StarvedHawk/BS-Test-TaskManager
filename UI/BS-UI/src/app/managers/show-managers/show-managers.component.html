@@ -1,1 +1,35 @@
-<p>show-managers works!</p>
+<table class="table table-striped">
+    <thead>
+        <th>Manager ID</th>
+        <th>Manager Name</th>
+        <th>Options</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dataItem of ManagerList">
+            <td>{{dataItem.ADMIN_ID}}</td>
+            <td>{{dataItem.ADMIN_NAME}}</td>
+            <td>
+                <button type="button" class="btn btn-light mr-1" (click)="setCurrentManager(dataItem.ADMIN_ID)">Show Employees</button>
+            </td>
+        </tr>
+</table>
+<div *ngIf="currentManager != 0">
+<table class="table table-striped">
+    <thead>
+        <th>Employee ID</th>
+        <th>Employee Name</th>
+        <th>Employee Email</th>
+        <th>Options</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dataItem of EmployeeList">
+            <td>{{dataItem.EMPLOYEE_ID}}</td>
+            <td>{{dataItem.EMPLOYEE_NAME}}</td>
+            <td>{{dataItem.EMPLOYEE_EMAIL}}</td>
+            <td>
+                <button type="button" class="btn btn-light mr-1">Open Employee</button>
+            </td>
+        </tr>
+</table>
+</div>
+
