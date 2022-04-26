@@ -1,1 +1,39 @@
-<p>show-tasks works!</p>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary float-right m-2" data-bs-toggle="modal" (click)="addClick()" data-bs-target="#addTaskModal">
+    Add Task
+   </button>
+   
+
+<table class="table table-striped">
+    <thead>
+        <th>Task ID</th>
+        <th>Task Name</th>
+        <th>Task Desc.</th>
+        <th>Options</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dataItem of TaskList">
+            <td>{{dataItem.TASK_ID}}</td>
+            <td>{{dataItem.TASK_NAME}}</td>
+            <td>{{dataItem.TASK_DESC}}</td>
+            <td>
+                <button type="button" class="btn btn-light mr-1" data-bs-toggle="modal" (click)="editClick(dataItem)" data-bs-target="#addTaskModal">Edit Task</button>
+                <button type="button" class="btn btn-light mr-1" (click)="deleteTask(dataItem.TASK_ID)">Delete Task</button>
+            </td>
+        </tr>
+</table>
+
+   <!-- Modal -->
+   <div class="modal fade" id="addTaskModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addTaskModalLabel">{{ModalTitle}}</h5>
+          <button type="button" class="btn-close" (click)="clickClose()" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <app-add-tasks [task]="task" *ngIf="ActivateAddEditTaskComp"></app-add-tasks>
+        </div>
+      </div>
+    </div>
+  </div>

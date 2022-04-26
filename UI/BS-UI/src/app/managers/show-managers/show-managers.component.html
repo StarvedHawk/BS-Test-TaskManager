@@ -27,7 +27,7 @@
             <td>{{dataItem.EMPLOYEE_NAME}}</td>
             <td>{{dataItem.EMPLOYEE_EMAIL}}</td>
             <td>
-                <button type="button" class="btn btn-light mr-1">Open Employee</button>
+                <button type="button" class="btn btn-light mr-1" [routerLink]="['../employee/',dataItem.EMPLOYEE_ID]">Open Employee</button>
             </td>
         </tr>
 </table>

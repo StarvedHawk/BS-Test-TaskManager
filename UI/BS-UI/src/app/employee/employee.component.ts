@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'app-employee',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeeComponent implements OnInit {
 
-  constructor() { }
+  id:any=0
+  Employee:any=[]
+  TaskList:any=[]
+
+  constructor(private _Activatedroute:ActivatedRoute,private service:SharedService) {
+    this.id=this._Activatedroute.snapshot.paramMap.get("id");
+   }
+  
 
   ngOnInit(): void {
+
   }
 
 }

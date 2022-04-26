@@ -25,8 +25,11 @@ export class SharedService {
   getEmployeesList():Observable<any[]>{
     return this.http.get<any>(this.APIUrl+'/Employees')
   }
+  getSpecificEmployee(val:any):Observable<any[]>{
+    return this.http.get<any>(this.APIUrl+'/Employees/'+val)
+  }
   getAllTasks(val:any):Observable<any[]>{
-    return this.http.get<any>(this.APIUrl+'/Employees/GetAllTasks'+val)
+    return this.http.get<any>(this.APIUrl+'/Employees/GetAllTasks/'+val)
   }
   getCompletedTasks(val:any):Observable<any[]>{
     return this.http.get<any>(this.APIUrl+'/Employees/GetCompletedTasks'+val)
